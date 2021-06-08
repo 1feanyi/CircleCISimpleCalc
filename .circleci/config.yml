@@ -26,8 +26,10 @@ jobs:
           path: C:\Users\circleci\project\test_coverage
   build:
     description: Build application with Release configuration
-    executor:
-      name: windows/default
+    # executor:
+    #   name: windows/default
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk
     steps:
       - checkout
       - run:
