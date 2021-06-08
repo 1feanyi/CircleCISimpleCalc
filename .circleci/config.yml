@@ -34,7 +34,8 @@ jobs:
       - checkout
       - run:
           name: "Build Application according to some given configuration"
-          command: dotnet.exe build --configuration Release
+          command: dotnet build --configuration Release
+          # command: dotnet.exe build --configuration Release
 workflows:
   build-and-test:
     jobs:
